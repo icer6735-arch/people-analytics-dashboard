@@ -1,31 +1,34 @@
 # People Analytics Dashboard
 
-An anonymized People Analytics case study featuring compensation and performance dashboard design, data analysis, and business insights.
+Public recruiting portfolio demo for a Compensation & Labor Cost Analytics Dashboard.
 
 ## Project status
 
-**V0.1 — Public portfolio structure**
+V0.2 — Interactive synthetic-data demo
 
-This repository is being rebuilt as a public-facing case study.  
-No confidential company data or personally identifiable information is included.
+The original internal project completed development validation and entered the demonstration stage. This public version was rebuilt independently from that experience. It does not copy the original repository, Git history, company data, database connections, authentication, permissions, imports, mappings, or enterprise-specific rules.
 
-## What this project demonstrates
+## Features
 
-- People Analytics problem framing
-- Compensation and performance analysis logic
-- Dashboard information architecture
-- Data visualization and interaction design
-- AI-assisted prototyping and iteration
+- Month and current/cumulative filters
+- Fictional department and generic role-family filters
+- Labor-cost budget utilization with explicit missing and zero states
+- Per-employee-month labor cost and average pretax pay KPIs
+- Budget versus actual, average pay trend, and pay-component charts
+- Responsive, dependency-free static frontend for GitHub Pages
 
-## Data privacy
+## Synthetic data
 
-All employee records, organizational identifiers, compensation figures, performance values, and business data shown in the public version are **synthetic**.
+All public records are independently generated synthetic data. The dataset contains 12 continuous months, fictional business units, generic role families, employee-month facts, and department-month budgets. pretax_pay always equals its five displayed components.
 
-The public version preserves only the analysis framework, metric logic, and product design approach from the original project experience.
+Generate and validate with node scripts/generate-synthetic-data.mjs and node scripts/validate-data.mjs.
 
-## Roadmap
+Run locally with python3 -m http.server 8000, then open http://localhost:8000.
 
-- [x] V0.1 — Portfolio page structure
-- [ ] V0.2 — Synthetic dataset
-- [ ] V0.3 — Interactive dashboard
-- [ ] V1.0 — Final recruiting portfolio version
+## Contribution statement
+
+After the initial business request was raised, I handled requirement clarification and adjustment, and led metric definition, page design, testing, validation, and iteration. Code implementation was primarily assisted by generative AI tools such as Codex; I was responsible for task decomposition, implementation constraints, result verification, and modification decisions.
+
+## Privacy
+
+No confidential company data, real employee information, original organizational structure, original budget scale, original pay range, internal screenshots, or private APIs are included.
