@@ -1,0 +1,8 @@
+[
+  { "id": "bu-a", "label": "Business Unit A", "parentId": null, "path": ["bu-a"] },
+  { "id": "bu-a-ops", "label": "Operations", "parentId": "bu-a", "path": ["bu-a", "bu-a-ops"] },
+  { "id": "bu-b", "label": "Business Unit B", "parentId": null, "path": ["bu-b"] },
+  { "id": "bu-b-sales", "label": "Sales", "parentId": "bu-b", "path": ["bu-b", "bu-b-sales"] },
+  { "id": "bu-c", "label": "Business Unit C", "parentId": null, "path": ["bu-c"] },
+  { "id": "bu-c-support", "label": "Business Support", "parentId": "bu-c", "path": ["bu-c", "bu-c-support"] }
+]

@@ -1,0 +1,4 @@
+import type { UsageStatus } from "./types";
+export function safeRate(actual: number | null, budget: number | null) { if (budget === null) return null; if (budget === 0 || actual === null) return null; return actual / budget; }
+export function usageStatus(actual: number | null, budget: number | null): UsageStatus { if (budget === null) return "no_budget"; if (budget === 0 || actual === null) return "not_calculable"; const rate = actual / budget; if (rate > 1) return "over"; if (rate >= .9) return "near"; return "healthy"; }
+export function statusText(actual: number | null, budget: number | null) { const status = usageStatus(actual, budget); if (status === "no_budget") return "无预算"; if (status === "not_calculable") return "无法计算"; if (status === "over") return "超预算"; if (status === "near") return "接近预算"; return "正常"; }

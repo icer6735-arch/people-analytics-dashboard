@@ -1,0 +1,10 @@
+export type ScopeKey = "workforce_planning" | "business_operations";
+export type Organization = { id: string; label: string; parentId: string | null; path: string[] };
+export type MonthlyBudgetRow = { month: string; organizationId: string; scope: ScopeKey; budgetAmount: number | null; actualAmount: number | null; budgetHc: number | null; actualHc: number | null };
+export type KpiDetail = { key: string; label: string; budget: number | null; actual: number | null; unit: "currency" | "count" };
+export type KpiSubject = { key: string; label: string; metricLabel: string; budget: number | null; actual: number | null; details: KpiDetail[]; children?: KpiSubject[] };
+export type KpiGroup = { key: string; label: string; subjects: KpiSubject[] };
+export type KpiScene = { key: string; label: string; groups: KpiGroup[] };
+export type PublicBudgetDataset = { months: string[]; organizations: Organization[]; monthly: MonthlyBudgetRow[]; kpiScenes: KpiScene[] };
+export type UsageStatus = "healthy" | "near" | "over" | "no_budget" | "not_calculable";
+export type UsageRow = { key: ScopeKey; label: string; budgetAmount: number | null; actualAmount: number | null; amountRate: number | null; budgetHc: number | null; actualHc: number | null; hcRate: number | null; perCapitaBudget: number | null; perCapitaActual: number | null; perCapitaRate: number | null };

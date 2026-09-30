@@ -1,0 +1,4 @@
+import { createBudgetPeriod, type BudgetViewMode } from "@/lib/budget-period-contract";
+import type { MonthlyBudgetRow, Organization } from "./types";
+export function organizationIdsForPath(organizations: Organization[], path: string[]) { if (!path.length) return organizations.map((item) => item.id); const selected = path.at(-1)!; return organizations.filter((item) => item.id === selected || item.path.includes(selected)).map((item) => item.id); }
+export function filterBudgetData(rows: MonthlyBudgetRow[], organizations: Organization[], reportMonth: string, viewMode: BudgetViewMode, organizationPath: string[]) { const period = createBudgetPeriod(reportMonth, viewMode); const ids = new Set(organizationIdsForPath(organizations, organizationPath)); return rows.filter((row) => period.effectiveMonths.includes(row.month) && ids.has(row.organizationId)); }

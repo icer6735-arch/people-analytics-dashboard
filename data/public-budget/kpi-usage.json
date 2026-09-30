@@ -1,0 +1,14 @@
+{ "scenes": [
+  { "key": "team-performance", "label": "Team Performance", "groups": [
+    { "key": "performance-rewards", "label": "Performance Rewards", "subjects": [
+      { "key": "employee-incentive", "label": "Employee Incentive", "metricLabel": "Achievement payout", "budget": 78000, "actual": 74200, "details": [{ "key": "standard", "label": "Standard achievement", "budget": 52000, "actual": 49800, "unit": "currency" }, { "key": "stretch", "label": "Stretch achievement", "budget": 26000, "actual": 24400, "unit": "currency" }] },
+      { "key": "quality-incentive", "label": "Quality Incentive", "metricLabel": "Quality milestone", "budget": 44000, "actual": 46900, "details": [{ "key": "quality-a", "label": "Quality milestone A", "budget": 24000, "actual": 25100, "unit": "currency" }, { "key": "quality-b", "label": "Quality milestone B", "budget": 20000, "actual": 21800, "unit": "currency" }] }
+    ] }
+  ] },
+  { "key": "shared-success", "label": "Shared Success", "groups": [
+    { "key": "team-rewards", "label": "Team Rewards", "subjects": [
+      { "key": "performance-bonus", "label": "Performance Bonus", "metricLabel": "Team result", "budget": 92000, "actual": 88700, "details": [{ "key": "team-a", "label": "Team result A", "budget": 46000, "actual": 45200, "unit": "currency" }, { "key": "team-b", "label": "Team result B", "budget": 46000, "actual": 43500, "unit": "currency" }] },
+      { "key": "team-reward", "label": "Team Reward", "metricLabel": "Collaboration outcome", "budget": 36000, "actual": 34700, "details": [{ "key": "delivery", "label": "Delivery outcome", "budget": 36000, "actual": 34700, "unit": "currency" }] }
+    ] }
+  ] }
+] }

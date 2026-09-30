@@ -1,0 +1,1 @@
+import { Card } from "antd"; export default function Page(){return <div className="pending-page"><Card><span className="pending-label">Pending sanitized migration</span><h1>人力成本评估</h1><p>该业务页尚未进行脱敏迁移。</p></Card></div>}
