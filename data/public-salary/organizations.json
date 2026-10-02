@@ -1,0 +1,22 @@
+[
+  {
+    "id": "demo-root",
+    "label": "虚构协作中心",
+    "parent_id": null
+  },
+  {
+    "id": "org-1",
+    "label": "晴空工作组",
+    "parent_id": "demo-root"
+  },
+  {
+    "id": "org-2",
+    "label": "晨光工作组",
+    "parent_id": "demo-root"
+  },
+  {
+    "id": "org-3",
+    "label": "暮色工作组",
+    "parent_id": "demo-root"
+  }
+]

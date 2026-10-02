@@ -1,0 +1,23 @@
+[
+  {
+    "id": "place-1",
+    "label": "云屿城",
+    "region_id": "region-1",
+    "region_label": "晴空区",
+    "city_tier": "甲类城市"
+  },
+  {
+    "id": "place-2",
+    "label": "星原城",
+    "region_id": "region-2",
+    "region_label": "晨光区",
+    "city_tier": "乙类城市"
+  },
+  {
+    "id": "place-3",
+    "label": "澄湾城",
+    "region_id": "region-3",
+    "region_label": "暮色区",
+    "city_tier": "丙类城市"
+  }
+]

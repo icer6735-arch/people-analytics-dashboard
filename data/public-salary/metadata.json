@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "is_synthetic": true,
+  "currency": "CNY",
+  "available_periods": [
+    "2025-01",
+    "2025-02",
+    "2025-03",
+    "2025-04",
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2025-08",
+    "2025-09",
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06",
+    "2026-07",
+    "2026-08",
+    "2026-09",
+    "2026-10",
+    "2026-11",
+    "2026-12"
+  ],
+  "default_period": "2026-07",
+  "notice": "完全虚构的薪资演示数据，不代表任何企业或市场薪酬水平",
+  "grade_bands": [
+    "G5",
+    "G4",
+    "G3",
+    "G2",
+    "G1"
+  ],
+  "population_groups": [
+    {
+      "id": "foundation",
+      "label": "基础组"
+    },
+    {
+      "id": "advanced",
+      "label": "进阶组"
+    }
+  ],
+  "provenance": "Independently designed deterministic arithmetic fixtures; no source records, salary ranges, organization ratios or city lists used."
+}

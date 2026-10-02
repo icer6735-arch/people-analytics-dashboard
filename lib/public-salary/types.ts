@@ -1,0 +1,10 @@
+export type AmountKey = 'base_pay' | 'level_pay' | 'performance_pay' | 'kpi_bonus' | 'other_pay';
+export type Employee = { employee_id: string; org_id: string; role_family_id: string; grade_band: string; population_group: string; location_id: string };
+export type SalaryRow = Employee & Record<AmountKey, number | null> & {period: string; pretax_pay: number | null};
+export type SalaryStructurePie = {key: string; title: string; positionName?: string; hc: number; employeeMonths: number; total: number; subjects: {key: string; name: string; amount: number; share: number}[]};
+export type SalaryStructureAnalysisData = {positions: string[]; positionPies: SalaryStructurePie[]; pies: SalaryStructurePie[]; cumulativePie: SalaryStructurePie | null};
+export type MonthlyPretaxTrendRow = {month: string; currentYear: number | null; lastYear: number | null; currentYearFoundation: number | null; lastYearFoundation: number | null; currentYearAdvanced: number | null; lastYearAdvanced: number | null; mom: number | null; yoy: number | null};
+export type PretaxTrendResponse = {currentYear: string; lastYear: string; monthlyData: MonthlyPretaxTrendRow[]};
+export type IncomeBucket = {key: string; headcount: number; employeeMonths: number; preTaxTotal: number | null; baseSalary: number | null; levelSalary: number | null; performanceSalary: number | null; bonusSalary: number | null; other: number | null};
+export type AvgBreakdown = {headcount: number; avgPretax: number | null; baseSalary: number | null; levelSalary: number | null; performanceSalary: number | null; bonusSalary: number | null; other: number | null};
+export type TreeOption = {label: string; value: string; children?: TreeOption[]};

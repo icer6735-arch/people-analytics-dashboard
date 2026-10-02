@@ -1,0 +1,474 @@
+.salary-analysis-page{display:flex;flex-direction:column;gap:12px;width:100%;min-width:0;max-width:100%;color:#334155;--color-border:#e2e8f0;--color-border-strong:#cbd5e1;--color-bg-page:#f8fafc;--color-text-muted:#64748b}
+.salary-analysis-page h1{margin:0;font-size:24px;color:#0f172a}.salary-analysis-page p{margin:4px 0}.salary-analysis-page .salary-filter-header{display:flex;flex-direction:column;gap:16px;margin-bottom:8px}.salary-analysis-page .salary-filter-header p{font-size:14px;color:#64748b}.salary-analysis-page .salary-filter-controls{display:flex;gap:16px;align-items:center}.salary-analysis-page .salary-filter-controls label{display:flex;gap:8px;align-items:center;white-space:nowrap;font-size:12px}.salary-analysis-page .salary-org-filter{flex:1}.salary-analysis-page .salary-structure-heading{display:flex;align-items:center;justify-content:space-between;border:1px solid #e2e8f0;border-radius:16px;background:white;padding:8px 12px}.salary-analysis-page .salary-definition{font-size:12px;color:#64748b;line-height:1.7}
+.salary-analysis-page .ant-card {
+  border-radius: 12px !important;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.06) !important;
+  margin-bottom: 0 !important;
+}
+
+.salary-analysis-page .ant-card-head {
+  min-height: 40px !important;
+  padding: 0 14px !important;
+}
+
+.salary-analysis-page .ant-card-head-title {
+  padding: 9px 0 !important;
+  font-size: 14px !important;
+  font-weight: 650 !important;
+}
+
+.salary-analysis-page .ant-card-body,
+.salary-analysis-page .salary-compact-card .ant-card-body {
+  padding: 12px !important;
+}
+
+.salary-analysis-page .ant-table-small .ant-table-cell {
+  padding: 6px 8px !important;
+}
+
+.salary-analysis-page .ant-segmented {
+  border-radius: 8px;
+}
+
+.salary-analysis-page .grid-positions {
+  gap: 10px !important;
+  padding: 0 !important;
+}
+
+.salary-analysis-page .grid-positions .position-card .ant-card-body {
+  padding: 12px !important;
+}
+
+/* Let flex/grid children and chart hosts fit the space beside the public SideNav.
+   Fixed-width position cards scroll only inside their dedicated strip below. */
+.salary-analysis-page > *,
+.salary-analysis-page .ant-card-body,
+.salary-analysis-page .ant-col,
+.salary-analysis-page .echarts-for-react {
+  min-width: 0;
+  max-width: 100%;
+}
+.salary-analysis-page .salary-filter-controls {
+  flex-wrap: wrap;
+}
+.salary-analysis-page .salary-filter-controls label {
+  min-width: 0;
+  max-width: 100%;
+}
+.salary-analysis-page .salary-filter-controls label > span:not(.ant-select) {
+  flex-shrink: 0;
+}
+.salary-analysis-page .salary-filter-controls .ant-select {
+  min-width: 0;
+  max-width: 100%;
+}
+.salary-analysis-page .salary-org-filter {
+  flex: 1 1 240px;
+}
+.salary-analysis-page .salary-position-pie-scroll {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  white-space: nowrap;
+  padding-bottom: 12px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border-strong) var(--color-bg-page);
+}
+
+.salary-analysis-page .salary-position-pie-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.salary-analysis-page .salary-position-pie-scroll::-webkit-scrollbar-track {
+  background: var(--color-bg-page);
+  border-radius: 999px;
+}
+
+.salary-analysis-page .salary-position-pie-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-border-strong);
+  border-radius: 999px;
+}
+
+.salary-analysis-page .salary-position-pie-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+.salary-analysis-page .salary-position-pie-card {
+  width: 390px;
+  flex-shrink: 0;
+  margin-right: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+}
+
+.salary-analysis-page [class~="flex"]{display:flex}
+.salary-analysis-page [class~="grid"]{display:grid}
+.salary-analysis-page [class~="block"]{display:block}
+.salary-analysis-page [class~="flex-col"]{flex-direction:column}
+.salary-analysis-page [class~="flex-row"]{flex-direction:row}
+.salary-analysis-page [class~="flex-wrap"]{flex-wrap:wrap}
+.salary-analysis-page [class~="flex-1"]{flex:1}
+.salary-analysis-page [class~="items-center"]{align-items:center}
+.salary-analysis-page [class~="items-start"]{align-items:flex-start}
+.salary-analysis-page [class~="justify-between"]{justify-content:space-between}
+.salary-analysis-page [class~="justify-center"]{justify-content:center}
+.salary-analysis-page [class~="justify-end"]{justify-content:flex-end}
+.salary-analysis-page [class~="shrink-0"]{flex-shrink:0}
+.salary-analysis-page [class~="min-w-0"]{min-width:0}
+.salary-analysis-page [class~="grid-cols-1"]{grid-template-columns:repeat(1,minmax(0,1fr))}
+.salary-analysis-page [class~="grid-cols-2"]{grid-template-columns:repeat(2,minmax(0,1fr))}
+.salary-analysis-page [class~="grid-cols-4"]{grid-template-columns:repeat(4,minmax(0,1fr))}
+.salary-analysis-page [class~="truncate"]{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.salary-analysis-page [class~="text-center"]{text-align:center}
+.salary-analysis-page [class~="text-xs"]{font-size:12px;line-height:16px}
+.salary-analysis-page [class~="text-sm"]{font-size:14px;line-height:20px}
+.salary-analysis-page [class~="text-base"]{font-size:16px;line-height:24px}
+.salary-analysis-page [class~="text-3xl"]{font-size:30px;line-height:36px}
+.salary-analysis-page [class~="font-medium"]{font-weight:500}
+.salary-analysis-page [class~="font-semibold"]{font-weight:600}
+.salary-analysis-page [class~="font-bold"]{font-weight:700}
+.salary-analysis-page [class~="font-extrabold"]{font-weight:800}
+.salary-analysis-page [class~="tracking-tight"]{letter-spacing:-.025em}
+.salary-analysis-page [class~="rounded-xl"]{border-radius:12px}
+.salary-analysis-page [class~="rounded-2xl"]{border-radius:16px}
+.salary-analysis-page [class~="rounded-full"]{border-radius:9999px}
+.salary-analysis-page [class~="border"]{border:1px solid #e2e8f0}
+.salary-analysis-page [class~="border-0"]{border-width:0}
+.salary-analysis-page [class~="border-slate-100"]{border-color:#f1f5f9}
+.salary-analysis-page [class~="border-blue-100"]{border-color:#dbeafe}
+.salary-analysis-page [class~="bg-white"]{background:#fff}
+.salary-analysis-page [class~="bg-slate-50"]{background:#f8fafc}
+.salary-analysis-page [class~="bg-slate-50/70"]{background:rgb(248 250 252 / .7)}
+.salary-analysis-page [class~="bg-blue-50/70"]{background:rgb(239 246 255 / .7)}
+.salary-analysis-page [class~="shadow-sm"]{box-shadow:0 1px 3px #0000000d}
+.salary-analysis-page [class~="text-slate-950"]{color:#020617}
+.salary-analysis-page [class~="text-slate-900"]{color:#0f172a}
+.salary-analysis-page [class~="text-slate-800"]{color:#1e293b}
+.salary-analysis-page [class~="text-slate-700"]{color:#334155}
+.salary-analysis-page [class~="text-slate-600"]{color:#475569}
+.salary-analysis-page [class~="text-slate-500"]{color:#64748b}
+.salary-analysis-page [class~="text-slate-300"]{color:#cbd5e1}
+.salary-analysis-page [class~="text-orange-600"]{color:#ea580c}
+.salary-analysis-page [class~="text-emerald-600"]{color:#059669}
+.salary-analysis-page [class~="h-8"]{height:32px}
+.salary-analysis-page [class~="w-8"]{width:32px}
+.salary-analysis-page [class~="m-0"]{margin:0}
+.salary-analysis-page [class~="min-w-[320px]"]{min-width:320px}
+.salary-analysis-page [class~="min-w-[520px]"]{min-width:520px}
+.salary-analysis-page [class~="bg-[var(--color-primary-soft)]"]{background:#eef3fa}
+.salary-analysis-page [class~="text-[var(--color-primary-strong)]"]{color:#4f6faf}
+.salary-analysis-page [class~="bg-[var(--color-champagne-soft)]"]{background:#fbf5d8}
+.salary-analysis-page [class~="text-[#8A6F00]"]{color:#8a6f00}
+.salary-analysis-page [class~="bg-[var(--color-rose-soft)]"]{background:#fcebf4}
+.salary-analysis-page [class~="text-[var(--color-rose)]"]{color:#bb548e}
+.salary-analysis-page [class~="bg-[var(--color-teal-soft)]"]{background:#e8f6f5}
+.salary-analysis-page [class~="text-[var(--color-teal)]"]{color:#0f8f8e}
+.salary-analysis-page [class~="gap-1"]{gap:4px}
+.salary-analysis-page [class~="p-1"]{padding:4px}
+.salary-analysis-page [class~="mb-1"]{margin-bottom:4px}
+.salary-analysis-page [class~="mt-1"]{margin-top:4px}
+.salary-analysis-page [class~="px-1"]{padding-left:4px;padding-right:4px}
+.salary-analysis-page [class~="py-1"]{padding-top:4px;padding-bottom:4px}
+.salary-analysis-page [class~="mx-1"]{margin-left:4px;margin-right:4px}
+.salary-analysis-page [class~="gap-2"]{gap:8px}
+.salary-analysis-page [class~="p-2"]{padding:8px}
+.salary-analysis-page [class~="mb-2"]{margin-bottom:8px}
+.salary-analysis-page [class~="mt-2"]{margin-top:8px}
+.salary-analysis-page [class~="px-2"]{padding-left:8px;padding-right:8px}
+.salary-analysis-page [class~="py-2"]{padding-top:8px;padding-bottom:8px}
+.salary-analysis-page [class~="mx-2"]{margin-left:8px;margin-right:8px}
+.salary-analysis-page [class~="gap-3"]{gap:12px}
+.salary-analysis-page [class~="p-3"]{padding:12px}
+.salary-analysis-page [class~="mb-3"]{margin-bottom:12px}
+.salary-analysis-page [class~="mt-3"]{margin-top:12px}
+.salary-analysis-page [class~="px-3"]{padding-left:12px;padding-right:12px}
+.salary-analysis-page [class~="py-3"]{padding-top:12px;padding-bottom:12px}
+.salary-analysis-page [class~="mx-3"]{margin-left:12px;margin-right:12px}
+.salary-analysis-page [class~="gap-4"]{gap:16px}
+.salary-analysis-page [class~="p-4"]{padding:16px}
+.salary-analysis-page [class~="mb-4"]{margin-bottom:16px}
+.salary-analysis-page [class~="mt-4"]{margin-top:16px}
+.salary-analysis-page [class~="px-4"]{padding-left:16px;padding-right:16px}
+.salary-analysis-page [class~="py-4"]{padding-top:16px;padding-bottom:16px}
+.salary-analysis-page [class~="mx-4"]{margin-left:16px;margin-right:16px}
+@media(min-width:768px){
+.salary-analysis-page [class~="md:flex"]{display:flex}
+.salary-analysis-page [class~="md:grid"]{display:grid}
+.salary-analysis-page [class~="md:block"]{display:block}
+.salary-analysis-page [class~="md:flex-col"]{flex-direction:column}
+.salary-analysis-page [class~="md:flex-row"]{flex-direction:row}
+.salary-analysis-page [class~="md:flex-wrap"]{flex-wrap:wrap}
+.salary-analysis-page [class~="md:flex-1"]{flex:1}
+.salary-analysis-page [class~="md:items-center"]{align-items:center}
+.salary-analysis-page [class~="md:items-start"]{align-items:flex-start}
+.salary-analysis-page [class~="md:justify-between"]{justify-content:space-between}
+.salary-analysis-page [class~="md:justify-center"]{justify-content:center}
+.salary-analysis-page [class~="md:justify-end"]{justify-content:flex-end}
+.salary-analysis-page [class~="md:shrink-0"]{flex-shrink:0}
+.salary-analysis-page [class~="md:min-w-0"]{min-width:0}
+.salary-analysis-page [class~="md:grid-cols-1"]{grid-template-columns:repeat(1,minmax(0,1fr))}
+.salary-analysis-page [class~="md:grid-cols-2"]{grid-template-columns:repeat(2,minmax(0,1fr))}
+.salary-analysis-page [class~="md:grid-cols-4"]{grid-template-columns:repeat(4,minmax(0,1fr))}
+.salary-analysis-page [class~="md:truncate"]{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.salary-analysis-page [class~="md:text-center"]{text-align:center}
+.salary-analysis-page [class~="md:text-xs"]{font-size:12px;line-height:16px}
+.salary-analysis-page [class~="md:text-sm"]{font-size:14px;line-height:20px}
+.salary-analysis-page [class~="md:text-base"]{font-size:16px;line-height:24px}
+.salary-analysis-page [class~="md:text-3xl"]{font-size:30px;line-height:36px}
+.salary-analysis-page [class~="md:font-medium"]{font-weight:500}
+.salary-analysis-page [class~="md:font-semibold"]{font-weight:600}
+.salary-analysis-page [class~="md:font-bold"]{font-weight:700}
+.salary-analysis-page [class~="md:font-extrabold"]{font-weight:800}
+.salary-analysis-page [class~="md:tracking-tight"]{letter-spacing:-.025em}
+.salary-analysis-page [class~="md:rounded-xl"]{border-radius:12px}
+.salary-analysis-page [class~="md:rounded-2xl"]{border-radius:16px}
+.salary-analysis-page [class~="md:rounded-full"]{border-radius:9999px}
+.salary-analysis-page [class~="md:border"]{border:1px solid #e2e8f0}
+.salary-analysis-page [class~="md:border-0"]{border-width:0}
+.salary-analysis-page [class~="md:border-slate-100"]{border-color:#f1f5f9}
+.salary-analysis-page [class~="md:border-blue-100"]{border-color:#dbeafe}
+.salary-analysis-page [class~="md:bg-white"]{background:#fff}
+.salary-analysis-page [class~="md:bg-slate-50"]{background:#f8fafc}
+.salary-analysis-page [class~="md:bg-slate-50/70"]{background:rgb(248 250 252 / .7)}
+.salary-analysis-page [class~="md:bg-blue-50/70"]{background:rgb(239 246 255 / .7)}
+.salary-analysis-page [class~="md:shadow-sm"]{box-shadow:0 1px 3px #0000000d}
+.salary-analysis-page [class~="md:text-slate-950"]{color:#020617}
+.salary-analysis-page [class~="md:text-slate-900"]{color:#0f172a}
+.salary-analysis-page [class~="md:text-slate-800"]{color:#1e293b}
+.salary-analysis-page [class~="md:text-slate-700"]{color:#334155}
+.salary-analysis-page [class~="md:text-slate-600"]{color:#475569}
+.salary-analysis-page [class~="md:text-slate-500"]{color:#64748b}
+.salary-analysis-page [class~="md:text-slate-300"]{color:#cbd5e1}
+.salary-analysis-page [class~="md:text-orange-600"]{color:#ea580c}
+.salary-analysis-page [class~="md:text-emerald-600"]{color:#059669}
+.salary-analysis-page [class~="md:h-8"]{height:32px}
+.salary-analysis-page [class~="md:w-8"]{width:32px}
+.salary-analysis-page [class~="md:m-0"]{margin:0}
+.salary-analysis-page [class~="md:min-w-[320px]"]{min-width:320px}
+.salary-analysis-page [class~="md:min-w-[520px]"]{min-width:520px}
+.salary-analysis-page [class~="md:bg-[var(--color-primary-soft)]"]{background:#eef3fa}
+.salary-analysis-page [class~="md:text-[var(--color-primary-strong)]"]{color:#4f6faf}
+.salary-analysis-page [class~="md:bg-[var(--color-champagne-soft)]"]{background:#fbf5d8}
+.salary-analysis-page [class~="md:text-[#8A6F00]"]{color:#8a6f00}
+.salary-analysis-page [class~="md:bg-[var(--color-rose-soft)]"]{background:#fcebf4}
+.salary-analysis-page [class~="md:text-[var(--color-rose)]"]{color:#bb548e}
+.salary-analysis-page [class~="md:bg-[var(--color-teal-soft)]"]{background:#e8f6f5}
+.salary-analysis-page [class~="md:text-[var(--color-teal)]"]{color:#0f8f8e}
+.salary-analysis-page [class~="md:gap-1"]{gap:4px}
+.salary-analysis-page [class~="md:p-1"]{padding:4px}
+.salary-analysis-page [class~="md:mb-1"]{margin-bottom:4px}
+.salary-analysis-page [class~="md:mt-1"]{margin-top:4px}
+.salary-analysis-page [class~="md:px-1"]{padding-left:4px;padding-right:4px}
+.salary-analysis-page [class~="md:py-1"]{padding-top:4px;padding-bottom:4px}
+.salary-analysis-page [class~="md:mx-1"]{margin-left:4px;margin-right:4px}
+.salary-analysis-page [class~="md:gap-2"]{gap:8px}
+.salary-analysis-page [class~="md:p-2"]{padding:8px}
+.salary-analysis-page [class~="md:mb-2"]{margin-bottom:8px}
+.salary-analysis-page [class~="md:mt-2"]{margin-top:8px}
+.salary-analysis-page [class~="md:px-2"]{padding-left:8px;padding-right:8px}
+.salary-analysis-page [class~="md:py-2"]{padding-top:8px;padding-bottom:8px}
+.salary-analysis-page [class~="md:mx-2"]{margin-left:8px;margin-right:8px}
+.salary-analysis-page [class~="md:gap-3"]{gap:12px}
+.salary-analysis-page [class~="md:p-3"]{padding:12px}
+.salary-analysis-page [class~="md:mb-3"]{margin-bottom:12px}
+.salary-analysis-page [class~="md:mt-3"]{margin-top:12px}
+.salary-analysis-page [class~="md:px-3"]{padding-left:12px;padding-right:12px}
+.salary-analysis-page [class~="md:py-3"]{padding-top:12px;padding-bottom:12px}
+.salary-analysis-page [class~="md:mx-3"]{margin-left:12px;margin-right:12px}
+.salary-analysis-page [class~="md:gap-4"]{gap:16px}
+.salary-analysis-page [class~="md:p-4"]{padding:16px}
+.salary-analysis-page [class~="md:mb-4"]{margin-bottom:16px}
+.salary-analysis-page [class~="md:mt-4"]{margin-top:16px}
+.salary-analysis-page [class~="md:px-4"]{padding-left:16px;padding-right:16px}
+.salary-analysis-page [class~="md:py-4"]{padding-top:16px;padding-bottom:16px}
+.salary-analysis-page [class~="md:mx-4"]{margin-left:16px;margin-right:16px}
+}
+@media(min-width:1024px){
+.salary-analysis-page [class~="lg:flex"]{display:flex}
+.salary-analysis-page [class~="lg:grid"]{display:grid}
+.salary-analysis-page [class~="lg:block"]{display:block}
+.salary-analysis-page [class~="lg:flex-col"]{flex-direction:column}
+.salary-analysis-page [class~="lg:flex-row"]{flex-direction:row}
+.salary-analysis-page [class~="lg:flex-wrap"]{flex-wrap:wrap}
+.salary-analysis-page [class~="lg:flex-1"]{flex:1}
+.salary-analysis-page [class~="lg:items-center"]{align-items:center}
+.salary-analysis-page [class~="lg:items-start"]{align-items:flex-start}
+.salary-analysis-page [class~="lg:justify-between"]{justify-content:space-between}
+.salary-analysis-page [class~="lg:justify-center"]{justify-content:center}
+.salary-analysis-page [class~="lg:justify-end"]{justify-content:flex-end}
+.salary-analysis-page [class~="lg:shrink-0"]{flex-shrink:0}
+.salary-analysis-page [class~="lg:min-w-0"]{min-width:0}
+.salary-analysis-page [class~="lg:grid-cols-1"]{grid-template-columns:repeat(1,minmax(0,1fr))}
+.salary-analysis-page [class~="lg:grid-cols-2"]{grid-template-columns:repeat(2,minmax(0,1fr))}
+.salary-analysis-page [class~="lg:grid-cols-4"]{grid-template-columns:repeat(4,minmax(0,1fr))}
+.salary-analysis-page [class~="lg:truncate"]{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.salary-analysis-page [class~="lg:text-center"]{text-align:center}
+.salary-analysis-page [class~="lg:text-xs"]{font-size:12px;line-height:16px}
+.salary-analysis-page [class~="lg:text-sm"]{font-size:14px;line-height:20px}
+.salary-analysis-page [class~="lg:text-base"]{font-size:16px;line-height:24px}
+.salary-analysis-page [class~="lg:text-3xl"]{font-size:30px;line-height:36px}
+.salary-analysis-page [class~="lg:font-medium"]{font-weight:500}
+.salary-analysis-page [class~="lg:font-semibold"]{font-weight:600}
+.salary-analysis-page [class~="lg:font-bold"]{font-weight:700}
+.salary-analysis-page [class~="lg:font-extrabold"]{font-weight:800}
+.salary-analysis-page [class~="lg:tracking-tight"]{letter-spacing:-.025em}
+.salary-analysis-page [class~="lg:rounded-xl"]{border-radius:12px}
+.salary-analysis-page [class~="lg:rounded-2xl"]{border-radius:16px}
+.salary-analysis-page [class~="lg:rounded-full"]{border-radius:9999px}
+.salary-analysis-page [class~="lg:border"]{border:1px solid #e2e8f0}
+.salary-analysis-page [class~="lg:border-0"]{border-width:0}
+.salary-analysis-page [class~="lg:border-slate-100"]{border-color:#f1f5f9}
+.salary-analysis-page [class~="lg:border-blue-100"]{border-color:#dbeafe}
+.salary-analysis-page [class~="lg:bg-white"]{background:#fff}
+.salary-analysis-page [class~="lg:bg-slate-50"]{background:#f8fafc}
+.salary-analysis-page [class~="lg:bg-slate-50/70"]{background:rgb(248 250 252 / .7)}
+.salary-analysis-page [class~="lg:bg-blue-50/70"]{background:rgb(239 246 255 / .7)}
+.salary-analysis-page [class~="lg:shadow-sm"]{box-shadow:0 1px 3px #0000000d}
+.salary-analysis-page [class~="lg:text-slate-950"]{color:#020617}
+.salary-analysis-page [class~="lg:text-slate-900"]{color:#0f172a}
+.salary-analysis-page [class~="lg:text-slate-800"]{color:#1e293b}
+.salary-analysis-page [class~="lg:text-slate-700"]{color:#334155}
+.salary-analysis-page [class~="lg:text-slate-600"]{color:#475569}
+.salary-analysis-page [class~="lg:text-slate-500"]{color:#64748b}
+.salary-analysis-page [class~="lg:text-slate-300"]{color:#cbd5e1}
+.salary-analysis-page [class~="lg:text-orange-600"]{color:#ea580c}
+.salary-analysis-page [class~="lg:text-emerald-600"]{color:#059669}
+.salary-analysis-page [class~="lg:h-8"]{height:32px}
+.salary-analysis-page [class~="lg:w-8"]{width:32px}
+.salary-analysis-page [class~="lg:m-0"]{margin:0}
+.salary-analysis-page [class~="lg:min-w-[320px]"]{min-width:320px}
+.salary-analysis-page [class~="lg:min-w-[520px]"]{min-width:520px}
+.salary-analysis-page [class~="lg:bg-[var(--color-primary-soft)]"]{background:#eef3fa}
+.salary-analysis-page [class~="lg:text-[var(--color-primary-strong)]"]{color:#4f6faf}
+.salary-analysis-page [class~="lg:bg-[var(--color-champagne-soft)]"]{background:#fbf5d8}
+.salary-analysis-page [class~="lg:text-[#8A6F00]"]{color:#8a6f00}
+.salary-analysis-page [class~="lg:bg-[var(--color-rose-soft)]"]{background:#fcebf4}
+.salary-analysis-page [class~="lg:text-[var(--color-rose)]"]{color:#bb548e}
+.salary-analysis-page [class~="lg:bg-[var(--color-teal-soft)]"]{background:#e8f6f5}
+.salary-analysis-page [class~="lg:text-[var(--color-teal)]"]{color:#0f8f8e}
+.salary-analysis-page [class~="lg:gap-1"]{gap:4px}
+.salary-analysis-page [class~="lg:p-1"]{padding:4px}
+.salary-analysis-page [class~="lg:mb-1"]{margin-bottom:4px}
+.salary-analysis-page [class~="lg:mt-1"]{margin-top:4px}
+.salary-analysis-page [class~="lg:px-1"]{padding-left:4px;padding-right:4px}
+.salary-analysis-page [class~="lg:py-1"]{padding-top:4px;padding-bottom:4px}
+.salary-analysis-page [class~="lg:mx-1"]{margin-left:4px;margin-right:4px}
+.salary-analysis-page [class~="lg:gap-2"]{gap:8px}
+.salary-analysis-page [class~="lg:p-2"]{padding:8px}
+.salary-analysis-page [class~="lg:mb-2"]{margin-bottom:8px}
+.salary-analysis-page [class~="lg:mt-2"]{margin-top:8px}
+.salary-analysis-page [class~="lg:px-2"]{padding-left:8px;padding-right:8px}
+.salary-analysis-page [class~="lg:py-2"]{padding-top:8px;padding-bottom:8px}
+.salary-analysis-page [class~="lg:mx-2"]{margin-left:8px;margin-right:8px}
+.salary-analysis-page [class~="lg:gap-3"]{gap:12px}
+.salary-analysis-page [class~="lg:p-3"]{padding:12px}
+.salary-analysis-page [class~="lg:mb-3"]{margin-bottom:12px}
+.salary-analysis-page [class~="lg:mt-3"]{margin-top:12px}
+.salary-analysis-page [class~="lg:px-3"]{padding-left:12px;padding-right:12px}
+.salary-analysis-page [class~="lg:py-3"]{padding-top:12px;padding-bottom:12px}
+.salary-analysis-page [class~="lg:mx-3"]{margin-left:12px;margin-right:12px}
+.salary-analysis-page [class~="lg:gap-4"]{gap:16px}
+.salary-analysis-page [class~="lg:p-4"]{padding:16px}
+.salary-analysis-page [class~="lg:mb-4"]{margin-bottom:16px}
+.salary-analysis-page [class~="lg:mt-4"]{margin-top:16px}
+.salary-analysis-page [class~="lg:px-4"]{padding-left:16px;padding-right:16px}
+.salary-analysis-page [class~="lg:py-4"]{padding-top:16px;padding-bottom:16px}
+.salary-analysis-page [class~="lg:mx-4"]{margin-left:16px;margin-right:16px}
+}
+@media(min-width:1280px){
+.salary-analysis-page [class~="xl:flex"]{display:flex}
+.salary-analysis-page [class~="xl:grid"]{display:grid}
+.salary-analysis-page [class~="xl:block"]{display:block}
+.salary-analysis-page [class~="xl:flex-col"]{flex-direction:column}
+.salary-analysis-page [class~="xl:flex-row"]{flex-direction:row}
+.salary-analysis-page [class~="xl:flex-wrap"]{flex-wrap:wrap}
+.salary-analysis-page [class~="xl:flex-1"]{flex:1}
+.salary-analysis-page [class~="xl:items-center"]{align-items:center}
+.salary-analysis-page [class~="xl:items-start"]{align-items:flex-start}
+.salary-analysis-page [class~="xl:justify-between"]{justify-content:space-between}
+.salary-analysis-page [class~="xl:justify-center"]{justify-content:center}
+.salary-analysis-page [class~="xl:justify-end"]{justify-content:flex-end}
+.salary-analysis-page [class~="xl:shrink-0"]{flex-shrink:0}
+.salary-analysis-page [class~="xl:min-w-0"]{min-width:0}
+.salary-analysis-page [class~="xl:grid-cols-1"]{grid-template-columns:repeat(1,minmax(0,1fr))}
+.salary-analysis-page [class~="xl:grid-cols-2"]{grid-template-columns:repeat(2,minmax(0,1fr))}
+.salary-analysis-page [class~="xl:grid-cols-4"]{grid-template-columns:repeat(4,minmax(0,1fr))}
+.salary-analysis-page [class~="xl:truncate"]{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.salary-analysis-page [class~="xl:text-center"]{text-align:center}
+.salary-analysis-page [class~="xl:text-xs"]{font-size:12px;line-height:16px}
+.salary-analysis-page [class~="xl:text-sm"]{font-size:14px;line-height:20px}
+.salary-analysis-page [class~="xl:text-base"]{font-size:16px;line-height:24px}
+.salary-analysis-page [class~="xl:text-3xl"]{font-size:30px;line-height:36px}
+.salary-analysis-page [class~="xl:font-medium"]{font-weight:500}
+.salary-analysis-page [class~="xl:font-semibold"]{font-weight:600}
+.salary-analysis-page [class~="xl:font-bold"]{font-weight:700}
+.salary-analysis-page [class~="xl:font-extrabold"]{font-weight:800}
+.salary-analysis-page [class~="xl:tracking-tight"]{letter-spacing:-.025em}
+.salary-analysis-page [class~="xl:rounded-xl"]{border-radius:12px}
+.salary-analysis-page [class~="xl:rounded-2xl"]{border-radius:16px}
+.salary-analysis-page [class~="xl:rounded-full"]{border-radius:9999px}
+.salary-analysis-page [class~="xl:border"]{border:1px solid #e2e8f0}
+.salary-analysis-page [class~="xl:border-0"]{border-width:0}
+.salary-analysis-page [class~="xl:border-slate-100"]{border-color:#f1f5f9}
+.salary-analysis-page [class~="xl:border-blue-100"]{border-color:#dbeafe}
+.salary-analysis-page [class~="xl:bg-white"]{background:#fff}
+.salary-analysis-page [class~="xl:bg-slate-50"]{background:#f8fafc}
+.salary-analysis-page [class~="xl:bg-slate-50/70"]{background:rgb(248 250 252 / .7)}
+.salary-analysis-page [class~="xl:bg-blue-50/70"]{background:rgb(239 246 255 / .7)}
+.salary-analysis-page [class~="xl:shadow-sm"]{box-shadow:0 1px 3px #0000000d}
+.salary-analysis-page [class~="xl:text-slate-950"]{color:#020617}
+.salary-analysis-page [class~="xl:text-slate-900"]{color:#0f172a}
+.salary-analysis-page [class~="xl:text-slate-800"]{color:#1e293b}
+.salary-analysis-page [class~="xl:text-slate-700"]{color:#334155}
+.salary-analysis-page [class~="xl:text-slate-600"]{color:#475569}
+.salary-analysis-page [class~="xl:text-slate-500"]{color:#64748b}
+.salary-analysis-page [class~="xl:text-slate-300"]{color:#cbd5e1}
+.salary-analysis-page [class~="xl:text-orange-600"]{color:#ea580c}
+.salary-analysis-page [class~="xl:text-emerald-600"]{color:#059669}
+.salary-analysis-page [class~="xl:h-8"]{height:32px}
+.salary-analysis-page [class~="xl:w-8"]{width:32px}
+.salary-analysis-page [class~="xl:m-0"]{margin:0}
+.salary-analysis-page [class~="xl:min-w-[320px]"]{min-width:320px}
+.salary-analysis-page [class~="xl:min-w-[520px]"]{min-width:520px}
+.salary-analysis-page [class~="xl:bg-[var(--color-primary-soft)]"]{background:#eef3fa}
+.salary-analysis-page [class~="xl:text-[var(--color-primary-strong)]"]{color:#4f6faf}
+.salary-analysis-page [class~="xl:bg-[var(--color-champagne-soft)]"]{background:#fbf5d8}
+.salary-analysis-page [class~="xl:text-[#8A6F00]"]{color:#8a6f00}
+.salary-analysis-page [class~="xl:bg-[var(--color-rose-soft)]"]{background:#fcebf4}
+.salary-analysis-page [class~="xl:text-[var(--color-rose)]"]{color:#bb548e}
+.salary-analysis-page [class~="xl:bg-[var(--color-teal-soft)]"]{background:#e8f6f5}
+.salary-analysis-page [class~="xl:text-[var(--color-teal)]"]{color:#0f8f8e}
+.salary-analysis-page [class~="xl:gap-1"]{gap:4px}
+.salary-analysis-page [class~="xl:p-1"]{padding:4px}
+.salary-analysis-page [class~="xl:mb-1"]{margin-bottom:4px}
+.salary-analysis-page [class~="xl:mt-1"]{margin-top:4px}
+.salary-analysis-page [class~="xl:px-1"]{padding-left:4px;padding-right:4px}
+.salary-analysis-page [class~="xl:py-1"]{padding-top:4px;padding-bottom:4px}
+.salary-analysis-page [class~="xl:mx-1"]{margin-left:4px;margin-right:4px}
+.salary-analysis-page [class~="xl:gap-2"]{gap:8px}
+.salary-analysis-page [class~="xl:p-2"]{padding:8px}
+.salary-analysis-page [class~="xl:mb-2"]{margin-bottom:8px}
+.salary-analysis-page [class~="xl:mt-2"]{margin-top:8px}
+.salary-analysis-page [class~="xl:px-2"]{padding-left:8px;padding-right:8px}
+.salary-analysis-page [class~="xl:py-2"]{padding-top:8px;padding-bottom:8px}
+.salary-analysis-page [class~="xl:mx-2"]{margin-left:8px;margin-right:8px}
+.salary-analysis-page [class~="xl:gap-3"]{gap:12px}
+.salary-analysis-page [class~="xl:p-3"]{padding:12px}
+.salary-analysis-page [class~="xl:mb-3"]{margin-bottom:12px}
+.salary-analysis-page [class~="xl:mt-3"]{margin-top:12px}
+.salary-analysis-page [class~="xl:px-3"]{padding-left:12px;padding-right:12px}
+.salary-analysis-page [class~="xl:py-3"]{padding-top:12px;padding-bottom:12px}
+.salary-analysis-page [class~="xl:mx-3"]{margin-left:12px;margin-right:12px}
+.salary-analysis-page [class~="xl:gap-4"]{gap:16px}
+.salary-analysis-page [class~="xl:p-4"]{padding:16px}
+.salary-analysis-page [class~="xl:mb-4"]{margin-bottom:16px}
+.salary-analysis-page [class~="xl:mt-4"]{margin-top:16px}
+.salary-analysis-page [class~="xl:px-4"]{padding-left:16px;padding-right:16px}
+.salary-analysis-page [class~="xl:py-4"]{padding-top:16px;padding-bottom:16px}
+.salary-analysis-page [class~="xl:mx-4"]{margin-left:16px;margin-right:16px}
+}

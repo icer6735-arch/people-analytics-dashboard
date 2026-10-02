@@ -1,0 +1,482 @@
+[
+  {
+    "employee_id": "SYN-001",
+    "org_id": "org-1",
+    "role_family_id": "role-1",
+    "grade_band": "G1",
+    "population_group": "foundation",
+    "location_id": "place-1"
+  },
+  {
+    "employee_id": "SYN-002",
+    "org_id": "org-1",
+    "role_family_id": "role-1",
+    "grade_band": "G2",
+    "population_group": "foundation",
+    "location_id": "place-1"
+  },
+  {
+    "employee_id": "SYN-003",
+    "org_id": "org-1",
+    "role_family_id": "role-1",
+    "grade_band": "G3",
+    "population_group": "advanced",
+    "location_id": "place-1"
+  },
+  {
+    "employee_id": "SYN-004",
+    "org_id": "org-1",
+    "role_family_id": "role-1",
+    "grade_band": "G4",
+    "population_group": "advanced",
+    "location_id": "place-1"
+  },
+  {
+    "employee_id": "SYN-005",
+    "org_id": "org-1",
+    "role_family_id": "role-1",
+    "grade_band": "G5",
+    "population_group": "advanced",
+    "location_id": "place-1"
+  },
+  {
+    "employee_id": "SYN-006",
+    "org_id": "org-2",
+    "role_family_id": "role-1",
+    "grade_band": "G1",
+    "population_group": "foundation",
+    "location_id": "place-2"
+  },
+  {
+    "employee_id": "SYN-007",
+    "org_id": "org-2",
+    "role_family_id": "role-1",
+    "grade_band": "G2",
+    "population_group": "foundation",
+    "location_id": "place-2"
+  },
+  {
+    "employee_id": "SYN-008",
+    "org_id": "org-2",
+    "role_family_id": "role-1",
+    "grade_band": "G3",
+    "population_group": "advanced",
+    "location_id": "place-2"
+  },
+  {
+    "employee_id": "SYN-009",
+    "org_id": "org-2",
+    "role_family_id": "role-1",
+    "grade_band": "G4",
+    "population_group": "advanced",
+    "location_id": "place-2"
+  },
+  {
+    "employee_id": "SYN-010",
+    "org_id": "org-2",
+    "role_family_id": "role-1",
+    "grade_band": "G5",
+    "population_group": "advanced",
+    "location_id": "place-2"
+  },
+  {
+    "employee_id": "SYN-011",
+    "org_id": "org-3",
+    "role_family_id": "role-1",
+    "grade_band": "G1",
+    "population_group": "foundation",
+    "location_id": "place-3"
+  },
+  {
+    "employee_id": "SYN-012",
+    "org_id": "org-3",
+    "role_family_id": "role-1",
+    "grade_band": "G2",
+    "population_group": "foundation",
+    "location_id": "place-3"
+  },
+  {
+    "employee_id": "SYN-013",
+    "org_id": "org-3",
+    "role_family_id": "role-1",
+    "grade_band": "G3",
+    "population_group": "advanced",
+    "location_id": "place-3"
+  },
+  {
+    "employee_id": "SYN-014",
+    "org_id": "org-3",
+    "role_family_id": "role-1",
+    "grade_band": "G4",
+    "population_group": "advanced",
+    "location_id": "place-3"
+  },
+  {
+    "employee_id": "SYN-015",
+    "org_id": "org-3",
+    "role_family_id": "role-1",
+    "grade_band": "G5",
+    "population_group": "advanced",
+    "location_id": "place-3"
+  },
+  {
+    "employee_id": "SYN-016",
+    "org_id": "org-1",
+    "role_family_id": "role-2",
+    "grade_band": "G1",
+    "population_group": "foundation",
+    "location_id": "place-1"
+  },
+  {
+    "employee_id": "SYN-017",
+    "org_id": "org-1",
+    "role_family_id": "role-2",
+    "grade_band": "G2",
+    "population_group": "foundation",
+    "location_id": "place-1"
+  },
+  {
+    "employee_id": "SYN-018",
+    "org_id": "org-1",
+    "role_family_id": "role-2",
+    "grade_band": "G3",
+    "population_group": "advanced",
+    "location_id": "place-1"
+  },
+  {
+    "employee_id": "SYN-019",
+    "org_id": "org-1",
+    "role_family_id": "role-2",
+    "grade_band": "G4",
+    "population_group": "advanced",
+    "location_id": "place-1"
+  },
+  {
+    "employee_id": "SYN-020",
+    "org_id": "org-1",
+    "role_family_id": "role-2",
+    "grade_band": "G5",
+    "population_group": "advanced",
+    "location_id": "place-1"
+  },
+  {
+    "employee_id": "SYN-021",
+    "org_id": "org-2",
+    "role_family_id": "role-2",
+    "grade_band": "G1",
+    "population_group": "foundation",
+    "location_id": "place-2"
+  },
+  {
+    "employee_id": "SYN-022",
+    "org_id": "org-2",
+    "role_family_id": "role-2",
+    "grade_band": "G2",
+    "population_group": "foundation",
+    "location_id": "place-2"
+  },
+  {
+    "employee_id": "SYN-023",
+    "org_id": "org-2",
+    "role_family_id": "role-2",
+    "grade_band": "G3",
+    "population_group": "advanced",
+    "location_id": "place-2"
+  },
+  {
+    "employee_id": "SYN-024",
+    "org_id": "org-2",
+    "role_family_id": "role-2",
+    "grade_band": "G4",
+    "population_group": "advanced",
+    "location_id": "place-2"
+  },
+  {
+    "employee_id": "SYN-025",
+    "org_id": "org-2",
+    "role_family_id": "role-2",
+    "grade_band": "G5",
+    "population_group": "advanced",
+    "location_id": "place-2"
+  },
+  {
+    "employee_id": "SYN-026",
+    "org_id": "org-3",
+    "role_family_id": "role-2",
+    "grade_band": "G1",
+    "population_group": "foundation",
+    "location_id": "place-3"
+  },
+  {
+    "employee_id": "SYN-027",
+    "org_id": "org-3",
+    "role_family_id": "role-2",
+    "grade_band": "G2",
+    "population_group": "foundation",
+    "location_id": "place-3"
+  },
+  {
+    "employee_id": "SYN-028",
+    "org_id": "org-3",
+    "role_family_id": "role-2",
+    "grade_band": "G3",
+    "population_group": "advanced",
+    "location_id": "place-3"
+  },
+  {
+    "employee_id": "SYN-029",
+    "org_id": "org-3",
+    "role_family_id": "role-2",
+    "grade_band": "G4",
+    "population_group": "advanced",
+    "location_id": "place-3"
+  },
+  {
+    "employee_id": "SYN-030",
+    "org_id": "org-3",
+    "role_family_id": "role-2",
+    "grade_band": "G5",
+    "population_group": "advanced",
+    "location_id": "place-3"
+  },
+  {
+    "employee_id": "SYN-031",
+    "org_id": "org-1",
+    "role_family_id": "role-3",
+    "grade_band": "G1",
+    "population_group": "foundation",
+    "location_id": "place-1"
+  },
+  {
+    "employee_id": "SYN-032",
+    "org_id": "org-1",
+    "role_family_id": "role-3",
+    "grade_band": "G2",
+    "population_group": "foundation",
+    "location_id": "place-1"
+  },
+  {
+    "employee_id": "SYN-033",
+    "org_id": "org-1",
+    "role_family_id": "role-3",
+    "grade_band": "G3",
+    "population_group": "advanced",
+    "location_id": "place-1"
+  },
+  {
+    "employee_id": "SYN-034",
+    "org_id": "org-1",
+    "role_family_id": "role-3",
+    "grade_band": "G4",
+    "population_group": "advanced",
+    "location_id": "place-1"
+  },
+  {
+    "employee_id": "SYN-035",
+    "org_id": "org-1",
+    "role_family_id": "role-3",
+    "grade_band": "G5",
+    "population_group": "advanced",
+    "location_id": "place-1"
+  },
+  {
+    "employee_id": "SYN-036",
+    "org_id": "org-2",
+    "role_family_id": "role-3",
+    "grade_band": "G1",
+    "population_group": "foundation",
+    "location_id": "place-2"
+  },
+  {
+    "employee_id": "SYN-037",
+    "org_id": "org-2",
+    "role_family_id": "role-3",
+    "grade_band": "G2",
+    "population_group": "foundation",
+    "location_id": "place-2"
+  },
+  {
+    "employee_id": "SYN-038",
+    "org_id": "org-2",
+    "role_family_id": "role-3",
+    "grade_band": "G3",
+    "population_group": "advanced",
+    "location_id": "place-2"
+  },
+  {
+    "employee_id": "SYN-039",
+    "org_id": "org-2",
+    "role_family_id": "role-3",
+    "grade_band": "G4",
+    "population_group": "advanced",
+    "location_id": "place-2"
+  },
+  {
+    "employee_id": "SYN-040",
+    "org_id": "org-2",
+    "role_family_id": "role-3",
+    "grade_band": "G5",
+    "population_group": "advanced",
+    "location_id": "place-2"
+  },
+  {
+    "employee_id": "SYN-041",
+    "org_id": "org-3",
+    "role_family_id": "role-3",
+    "grade_band": "G1",
+    "population_group": "foundation",
+    "location_id": "place-3"
+  },
+  {
+    "employee_id": "SYN-042",
+    "org_id": "org-3",
+    "role_family_id": "role-3",
+    "grade_band": "G2",
+    "population_group": "foundation",
+    "location_id": "place-3"
+  },
+  {
+    "employee_id": "SYN-043",
+    "org_id": "org-3",
+    "role_family_id": "role-3",
+    "grade_band": "G3",
+    "population_group": "advanced",
+    "location_id": "place-3"
+  },
+  {
+    "employee_id": "SYN-044",
+    "org_id": "org-3",
+    "role_family_id": "role-3",
+    "grade_band": "G4",
+    "population_group": "advanced",
+    "location_id": "place-3"
+  },
+  {
+    "employee_id": "SYN-045",
+    "org_id": "org-3",
+    "role_family_id": "role-3",
+    "grade_band": "G5",
+    "population_group": "advanced",
+    "location_id": "place-3"
+  },
+  {
+    "employee_id": "SYN-046",
+    "org_id": "org-1",
+    "role_family_id": "role-4",
+    "grade_band": "G1",
+    "population_group": "foundation",
+    "location_id": "place-1"
+  },
+  {
+    "employee_id": "SYN-047",
+    "org_id": "org-1",
+    "role_family_id": "role-4",
+    "grade_band": "G2",
+    "population_group": "foundation",
+    "location_id": "place-1"
+  },
+  {
+    "employee_id": "SYN-048",
+    "org_id": "org-1",
+    "role_family_id": "role-4",
+    "grade_band": "G3",
+    "population_group": "advanced",
+    "location_id": "place-1"
+  },
+  {
+    "employee_id": "SYN-049",
+    "org_id": "org-1",
+    "role_family_id": "role-4",
+    "grade_band": "G4",
+    "population_group": "advanced",
+    "location_id": "place-1"
+  },
+  {
+    "employee_id": "SYN-050",
+    "org_id": "org-1",
+    "role_family_id": "role-4",
+    "grade_band": "G5",
+    "population_group": "advanced",
+    "location_id": "place-1"
+  },
+  {
+    "employee_id": "SYN-051",
+    "org_id": "org-2",
+    "role_family_id": "role-4",
+    "grade_band": "G1",
+    "population_group": "foundation",
+    "location_id": "place-2"
+  },
+  {
+    "employee_id": "SYN-052",
+    "org_id": "org-2",
+    "role_family_id": "role-4",
+    "grade_band": "G2",
+    "population_group": "foundation",
+    "location_id": "place-2"
+  },
+  {
+    "employee_id": "SYN-053",
+    "org_id": "org-2",
+    "role_family_id": "role-4",
+    "grade_band": "G3",
+    "population_group": "advanced",
+    "location_id": "place-2"
+  },
+  {
+    "employee_id": "SYN-054",
+    "org_id": "org-2",
+    "role_family_id": "role-4",
+    "grade_band": "G4",
+    "population_group": "advanced",
+    "location_id": "place-2"
+  },
+  {
+    "employee_id": "SYN-055",
+    "org_id": "org-2",
+    "role_family_id": "role-4",
+    "grade_band": "G5",
+    "population_group": "advanced",
+    "location_id": "place-2"
+  },
+  {
+    "employee_id": "SYN-056",
+    "org_id": "org-3",
+    "role_family_id": "role-4",
+    "grade_band": "G1",
+    "population_group": "foundation",
+    "location_id": "place-3"
+  },
+  {
+    "employee_id": "SYN-057",
+    "org_id": "org-3",
+    "role_family_id": "role-4",
+    "grade_band": "G2",
+    "population_group": "foundation",
+    "location_id": "place-3"
+  },
+  {
+    "employee_id": "SYN-058",
+    "org_id": "org-3",
+    "role_family_id": "role-4",
+    "grade_band": "G3",
+    "population_group": "advanced",
+    "location_id": "place-3"
+  },
+  {
+    "employee_id": "SYN-059",
+    "org_id": "org-3",
+    "role_family_id": "role-4",
+    "grade_band": "G4",
+    "population_group": "advanced",
+    "location_id": "place-3"
+  },
+  {
+    "employee_id": "SYN-060",
+    "org_id": "org-3",
+    "role_family_id": "role-4",
+    "grade_band": "G5",
+    "population_group": "advanced",
+    "location_id": "place-3"
+  }
+]
