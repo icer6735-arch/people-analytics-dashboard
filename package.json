@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test:data": "node scripts/validate-public-budget.mjs && node scripts/validate-public-salary.mjs"
+    "test:data": "node scripts/validate-public-budget.mjs && node scripts/validate-public-salary.mjs && node scripts/validate-public-evaluation.mjs"
   },
   "dependencies": {
     "@ant-design/icons": "^6.0.0",

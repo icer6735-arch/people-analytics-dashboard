@@ -2,6 +2,8 @@
 
 Salary Phase 1 has passed final human acceptance and is frozen for the local baseline commit. No push is authorized. Salary Phase 2 will not be executed in this project.
 
+Evaluation Phase 1C keeps the Phase 1B layout and adds an independently generated synthetic employer_cost in the public evaluation adapter: labor_cost = pretax_pay + employer_cost. The coefficient is stable per synthetic employee across months and explicitly a demo field, not a statutory rate, company rate, or market benchmark. The shared public salary adapter now applies a documented synthetic active-period filter and stable role-family pay differentiation so salary and evaluation share the same varying employee-month universe. No evaluation API, database, auth, permission, mapping, or source asset was added. Do not start frontline migration in this project without a new explicit scope.
+
 Preserved: accepted budget page, global CSS, public AppShell/SideNav, static export and Pages configuration.
 
 Reused and sanitized: salary page composition, SalaryStructurePositions, SalaryPretaxTrendModule, EmployeeIncomeOverview, chart-colors. global-filter copied as-is; existing month-normalization reused.
@@ -10,7 +12,7 @@ New boundary: public-salary adapter → local synthetic JSON only. Public calcul
 
 ## Verification (2026-10-02)
 
-- npm run test:data passed: existing budget validation plus 1425 salary employee-months, unique keys, dimension links, component sums, filters, real adapter aggregates, zero/null, weighted means, January comparison and forbidden dependency checks.
+- npm run test:data passed: existing budget validation plus 1359 salary employee-months, unique keys, dimension links, component sums, filters, adapter aggregates, zero/null, weighted means, January comparison and forbidden dependency checks.
 - npm run build passed; GITHUB_ACTIONS=true npm run build also passed with final code. Salary and budget both exported as static routes.
 - git diff --check passed. Frozen budget files, global CSS, shell/navigation, month normalization, lockfile and Next configuration have no diff.
 - Chromium via ego-browser, 1600 × 1000: month/org/role filters, clearing, month/YTD structure, pie tooltip, trend click-to-select, 12-row Collapse detail and four-panel city-tier comparison checked.

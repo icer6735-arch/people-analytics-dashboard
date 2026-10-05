@@ -122,7 +122,7 @@
   {
     "employee_id": "SYN-016",
     "org_id": "org-1",
-    "role_family_id": "role-2",
+    "role_family_id": "role-1",
     "grade_band": "G1",
     "population_group": "foundation",
     "location_id": "place-1"
@@ -130,7 +130,7 @@
   {
     "employee_id": "SYN-017",
     "org_id": "org-1",
-    "role_family_id": "role-2",
+    "role_family_id": "role-1",
     "grade_band": "G2",
     "population_group": "foundation",
     "location_id": "place-1"
@@ -138,7 +138,7 @@
   {
     "employee_id": "SYN-018",
     "org_id": "org-1",
-    "role_family_id": "role-2",
+    "role_family_id": "role-1",
     "grade_band": "G3",
     "population_group": "advanced",
     "location_id": "place-1"
@@ -242,7 +242,7 @@
   {
     "employee_id": "SYN-031",
     "org_id": "org-1",
-    "role_family_id": "role-3",
+    "role_family_id": "role-2",
     "grade_band": "G1",
     "population_group": "foundation",
     "location_id": "place-1"
@@ -250,7 +250,7 @@
   {
     "employee_id": "SYN-032",
     "org_id": "org-1",
-    "role_family_id": "role-3",
+    "role_family_id": "role-2",
     "grade_band": "G2",
     "population_group": "foundation",
     "location_id": "place-1"
@@ -258,7 +258,7 @@
   {
     "employee_id": "SYN-033",
     "org_id": "org-1",
-    "role_family_id": "role-3",
+    "role_family_id": "role-2",
     "grade_band": "G3",
     "population_group": "advanced",
     "location_id": "place-1"
@@ -266,7 +266,7 @@
   {
     "employee_id": "SYN-034",
     "org_id": "org-1",
-    "role_family_id": "role-3",
+    "role_family_id": "role-2",
     "grade_band": "G4",
     "population_group": "advanced",
     "location_id": "place-1"
@@ -362,7 +362,7 @@
   {
     "employee_id": "SYN-046",
     "org_id": "org-1",
-    "role_family_id": "role-4",
+    "role_family_id": "role-3",
     "grade_band": "G1",
     "population_group": "foundation",
     "location_id": "place-1"
@@ -370,7 +370,7 @@
   {
     "employee_id": "SYN-047",
     "org_id": "org-1",
-    "role_family_id": "role-4",
+    "role_family_id": "role-3",
     "grade_band": "G2",
     "population_group": "foundation",
     "location_id": "place-1"
@@ -378,7 +378,7 @@
   {
     "employee_id": "SYN-048",
     "org_id": "org-1",
-    "role_family_id": "role-4",
+    "role_family_id": "role-3",
     "grade_band": "G3",
     "population_group": "advanced",
     "location_id": "place-1"

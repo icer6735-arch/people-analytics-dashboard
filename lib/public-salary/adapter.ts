@@ -3,12 +3,38 @@ import sourceRows from '../../data/public-salary/salary-monthly.json';
 import roles from '../../data/public-salary/roles.json';
 import locations from '../../data/public-salary/locations.json';
 import organizations from '../../data/public-salary/organizations.json';
+import employees from '../../data/public-salary/employees.json';
 import type {SalaryGlobalFilters} from '../../components/salary/global-filter';
 import type {SalaryRow,SalaryStructureAnalysisData,SalaryStructurePie,TreeOption,PretaxTrendResponse} from './types';
 import {filterSalaryData} from './filter-salary-data';
 import {amountKeys,amountLabels,counts,sumAmount,meanPretax,percentChange,previousPeriod,incomeBucket} from './calculations';
 export {metadata, roles, locations};
-export const salaryRows:SalaryRow[]=sourceRows;
+const employeeDimensions = new Map(employees.map((employee) => [employee.employee_id, employee]));
+function employeeNumber(employeeId:string){return Number(employeeId.replace(/\D/g,''))||0;}
+// Role-level pay differentiation is an invented, stable demo transformation
+// applied to the synthetic facts only. It is not a market benchmark or source
+// payroll rule; keeping it here lets salary and evaluation share one universe.
+const rolePayMultipliers:Record<string,number>={"role-1":1,"role-2":1.1,"role-3":0.9,"role-4":1.15};
+function applySyntheticRolePay(row:SalaryRow):SalaryRow {
+  const multiplier=rolePayMultipliers[row.role_family_id]??1;
+  if(multiplier===1||amountKeys.some((key)=>row[key]===null))return row;
+  const scaled={...row};
+  for(const key of amountKeys) scaled[key]=Math.round((row[key] as number)*multiplier);
+  scaled.pretax_pay=amountKeys.reduce((sum,key)=>sum+(scaled[key]??0),0);
+  return scaled;
+}
+// Public demo active-period policy: a few invented employees join or leave in
+// fixed months selected only to make the employee-month trend observable. It
+// is not a turnover model or a claim about real workforce behavior.
+function isSyntheticActive(employeeId:string, period:string){
+  const id=employeeNumber(employeeId);
+  const joinAfter=id%17===0?'2025-10':'';
+  const leaveAfter=id%29===0?'2026-03':id%31===0?'2026-04':id%37===0?'2026-05':id%41===0?'2026-06':'';
+  return (!joinAfter||period>=joinAfter)&&(!leaveAfter||period<=leaveAfter);
+}
+export const salaryRows:SalaryRow[]=sourceRows
+  .filter((row)=>isSyntheticActive(row.employee_id,row.period))
+  .map((row) => applySyntheticRolePay({ ...row, ...(employeeDimensions.get(row.employee_id) ?? {}) }));
 export function roleLabel(id:string){return roles.find(r=>r.id===id)?.label??'未知岗位';}
 export function getSalaryFilterOptions(){
   const tree=(parent:string|null):TreeOption[]=>organizations.filter(o=>o.parent_id===parent).map(o=>({label:o.label,value:o.id,...(organizations.some(child=>child.parent_id===o.id)?{children:tree(o.id)}:{})}));

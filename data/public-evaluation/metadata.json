@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "is_synthetic": true,
+  "labor_cost_definition": "labor_cost = pretax_pay + employer_cost",
+  "employer_cost_definition": "independently generated deterministic demo amount; not a statutory rate, company rate, or market benchmark",
+  "hc_definition": "distinct employee_id in the selected period",
+  "employee_month_key": ["employee_id", "period"],
+  "missing_value": null,
+  "zero_value": 0
+}
