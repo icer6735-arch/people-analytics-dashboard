@@ -14,7 +14,7 @@ export default function SalaryAnalysisPage(){
   const [viewType,setViewType]=useState<'当月'|'累计'>('当月');
   const options=useMemo(()=>getSalaryFilterOptions(),[]);
   const structure=useMemo(()=>getSalaryStructure(filters,viewType),[filters,viewType]);
-  return <div className="salary-analysis-page">
+  return <div className="salary-analysis-page page-shell page-shell--wide">
     <div className="salary-filter-header">
       <div><h1>薪资分析</h1><p>顶部筛选器联动薪资分析各模块 · 完全虚构数据</p></div>
       <div className="salary-filter-controls">

@@ -65,7 +65,7 @@ export default function DetailPage() {
     const keyMap: Record<string, DetailSort["key"]> = { employee_id: "employee_id", period: "period", organization_path: "organization_label", role_label: "role_label", grade_band: "grade_band", location_label: "location_label", base_pay: "base_pay", pretax_pay: "pretax_pay" };
     if (keyMap[item.field]) setSort({ key: keyMap[item.field], direction: item.order });
   };
-  return <div className="detail-page">
+  return <div className="detail-page page-shell page-shell--table">
     <div className="detail-header"><div><h1>明细查询</h1><Text type="secondary">薪资底层明细查询与筛选</Text></div><Button type="primary" icon={<DownloadOutlined />} disabled={!displayedRows.length} onClick={() => { exportCsv(displayedRows); message.success("已导出当前筛选的全部合成明细"); }}>导出当前筛选 (CSV)</Button></div>
     <Card className="detail-control-card">
       <div className="detail-type-row"><Text type="secondary">数据类型：</Text><Segmented value="salary" options={[{ label: "Salary 明细", value: "salary" }, { label: "KPI 明细（未迁移）", value: "kpi", disabled: true }, { label: "薪资调整（未迁移）", value: "adjustment", disabled: true }]} /></div>
