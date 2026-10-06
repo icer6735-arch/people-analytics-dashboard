@@ -1,0 +1,70 @@
+:root {
+  /* Color roles */
+  --ds-color-page: #f5f7fa;
+  --ds-color-surface: #ffffff;
+  --ds-color-surface-soft: #f7f9fb;
+  --ds-color-border: #e3e8ef;
+  --ds-color-border-subtle: #edf0f4;
+  --ds-color-text: #1f2937;
+  --ds-color-text-secondary: #526071;
+  --ds-color-text-muted: #7b8798;
+  --ds-color-primary: #4f6faf;
+  --ds-color-primary-soft: #eef3fa;
+  --ds-color-accent-teal: #4d9589;
+  --ds-color-accent-violet: #7c77b8;
+  --ds-color-accent-amber: #c38a54;
+  --ds-color-success: #438d82;
+  --ds-color-success-soft: #e8f6f5;
+  --ds-color-warning: #c38a54;
+  --ds-color-warning-soft: #fbf5d8;
+  --ds-color-danger: #b95c65;
+  --ds-color-danger-soft: #fcebf4;
+  --ds-color-neutral: #9aa3b2;
+  --ds-color-neutral-soft: #f1f3f6;
+
+  /* Typography roles */
+  --ds-font-family-sans: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --ds-font-size-page-title: 22px;
+  --ds-font-size-section-title: 16px;
+  --ds-font-size-kpi: 28px;
+  --ds-font-size-body: 14px;
+  --ds-font-size-meta: 12px;
+  --ds-line-height-page-title: 30px;
+  --ds-line-height-section-title: 24px;
+  --ds-line-height-body: 1.7;
+  --ds-line-height-meta: 1.5;
+  --ds-font-weight-section-title: 650;
+  --ds-font-weight-kpi: 700;
+
+  /* Spacing scale */
+  --ds-space-1: 4px;
+  --ds-space-2: 8px;
+  --ds-space-3: 12px;
+  --ds-space-4: 16px;
+  --ds-space-5: 20px;
+  --ds-space-6: 24px;
+  --ds-space-8: 32px;
+  --ds-space-10: 40px;
+
+  /* Surfaces, borders, radius and shadows */
+  --ds-radius-control: 6px;
+  --ds-radius-card: 10px;
+  --ds-radius-section: 14px;
+  --ds-radius-hero: 18px;
+  --ds-border-width: 1px;
+  --ds-shadow-none: none;
+  --ds-shadow-float: 0 3px 10px rgba(31, 41, 55, .045);
+  --ds-shadow-hero: 0 18px 45px rgba(31, 55, 85, .14);
+
+  /* Control and layout primitives (consumed by later phases) */
+  --ds-control-height: 32px;
+  --ds-control-height-compact: 28px;
+  --ds-focus-ring: 0 0 0 2px rgba(79, 111, 175, .2);
+  --ds-content-max: 1440px;
+  --ds-content-max-portfolio: 1280px;
+  --ds-gutter-desktop: 24px;
+  --ds-gutter-mobile: 14px;
+  --ds-breakpoint-mobile: 560px;
+  --ds-breakpoint-tablet: 820px;
+  --ds-breakpoint-wide: 1100px;
+}
