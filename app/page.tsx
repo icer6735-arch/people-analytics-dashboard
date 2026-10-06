@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRightOutlined, CheckOutlined, DatabaseOutlined, ExportOutlined, LineChartOutlined, SafetyCertificateOutlined } from "@ant-design/icons";
+import { ArrowRightOutlined, CheckOutlined, DatabaseOutlined, LineChartOutlined, SafetyCertificateOutlined } from "@ant-design/icons";
 import "./overview.css";
 
 const problemThemes = [
@@ -36,8 +36,8 @@ export default function ProjectOverviewPage() {
         <span className="overview-eyebrow">HR 数据分析作品集</span>
         <h1 id="overview-title">人力数据<br /><em>分析看板</em></h1>
         <p className="overview-hero-subtitle">面向 HR 的人力数据分析看板。围绕预算进度、薪资结构、人力成本和员工月度明细，整理出一套可以直接查询和核对的分析页面。</p>
-        <div className="overview-hero-actions"><Link className="overview-button overview-button--primary" href="#modules">查看四个分析模块 <ArrowRightOutlined /></Link><Link className="overview-button overview-button--quiet" href="/architecture/">了解系统架构 <ExportOutlined /></Link></div>
-        <p className="overview-hero-note"><SafetyCertificateOutlined /> 公开版使用虚构演示数据，不连接原企业 API、数据库、身份或权限系统。</p>
+        <div className="overview-hero-actions"><Link className="overview-button overview-button--primary" href="#modules">查看四个分析模块 <ArrowRightOutlined /></Link></div>
+        <p className="overview-hero-note"><SafetyCertificateOutlined /> 公开版已完成数据脱敏，并使用虚构演示数据，不包含原企业数据及内部系统连接。</p>
       </div>
       <div className="overview-hero-aside" aria-label="项目摘要">
         <span className="overview-aside-index">01 / 项目作品</span>
@@ -75,8 +75,6 @@ export default function ProjectOverviewPage() {
     <section className="overview-section overview-ai" aria-labelledby="ai-title">
       <div className="overview-ai-label"><span className="overview-section-kicker">06 / 开发方式</span><span className="overview-ai-mark">AI</span></div><div><h2 id="ai-title">AI 辅助开发</h2><p>生成式 AI 用于代码探索、实现辅助与测试；业务需求拆解、指标定义、数据边界、产品取舍与最终验收由人工负责。</p><small>指标口径、数据边界和最终验收由人工负责。</small></div>
     </section>
-
-    <section className="overview-section overview-architecture" aria-labelledby="architecture-title"><div><span className="overview-section-kicker">07 / 系统架构案例</span><h2 id="architecture-title">系统架构说明</h2><p>说明原系统与公开作品集的边界，以及虚构演示数据如何经过适配层和计算层进入静态页面。</p></div><Link className="overview-architecture-link" href="/architecture/"><span>系统架构案例<br /><b>待完善</b></span><ExportOutlined /></Link></section>
 
     <section className="overview-scope-boundary" aria-label="公开范围说明"><DatabaseOutlined /><p><strong>公开边界</strong>　公开版不迁移原系统的数据导入、映射配置、权限管理或数据库管理后台；这些能力将在架构案例中作为设计取舍说明。</p></section>
   </main>;
