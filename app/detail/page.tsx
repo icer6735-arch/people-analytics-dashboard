@@ -68,7 +68,7 @@ export default function DetailPage() {
   return <div className="detail-page page-shell page-shell--table">
     <div className="detail-header"><div><h1>明细查询</h1><Text type="secondary">薪资底层明细查询与筛选</Text></div><Button type="primary" icon={<DownloadOutlined />} disabled={!displayedRows.length} onClick={() => { exportCsv(displayedRows); message.success("已导出当前筛选的全部合成明细"); }}>导出当前筛选 (CSV)</Button></div>
     <Card className="detail-control-card">
-      <div className="detail-type-row"><Text type="secondary">数据类型：</Text><Segmented value="salary" options={[{ label: "Salary 明细", value: "salary" }, { label: "KPI 明细（未迁移）", value: "kpi", disabled: true }, { label: "薪资调整（未迁移）", value: "adjustment", disabled: true }]} /></div>
+      <div className="detail-type-row"><Text type="secondary">数据类型：</Text><Segmented value="salary" options={[{ label: "薪资明细", value: "salary" }, { label: "KPI 明细（未迁移）", value: "kpi", disabled: true }, { label: "薪资调整（未迁移）", value: "adjustment", disabled: true }]} /></div>
       <div className="detail-filter-grid">
         <label><span>关键词</span><Input allowClear value={draft.keyword} onChange={(event) => setDraft({ ...draft, keyword: event.target.value })} onPressEnter={apply} placeholder="员工编号 / 组织 / 岗位组" prefix={<SearchOutlined />} /></label>
         <label><span>统计月份</span><Select allowClear value={draft.period || undefined} options={detailPeriods.map((value) => ({ label: value, value }))} onChange={(value) => setDraft({ ...draft, period: value ?? "" })} placeholder="全部月份" /></label>
@@ -81,9 +81,9 @@ export default function DetailPage() {
       <div className="detail-secondary-row"><Switch checked={aggregateEnabled} onChange={setAggregateEnabled} /><span>按员工编号 + 计薪周期聚合</span><Text type="secondary">保留原交互；当前公开事实通常为一人一月一条</Text></div>
     </Card>
     <Card className="detail-table-card">
-      <div className="detail-summary"><div><strong>{aggregateEnabled ? `聚合后 ${displayedRows.length} 组` : `当前展示 ${displayedRows.length} 条`}</strong><Text type="secondary">　/　筛选结果 {filteredRows.length} 条</Text></div><Text type="secondary">仅含 synthetic salary facts</Text></div>
+      <div className="detail-summary"><div><strong>{aggregateEnabled ? `聚合后 ${displayedRows.length} 组` : `当前展示 ${displayedRows.length} 条`}</strong><Text type="secondary">　/　筛选结果 {filteredRows.length} 条</Text></div><Text type="secondary">仅展示虚构薪资明细数据</Text></div>
       {error ? <Alert type="error" showIcon message="明细数据加载失败" description={error} /> : <Table<DetailRow> loading={loading} rowKey="row_key" columns={columns} dataSource={displayedRows} onChange={handleTableChange} scroll={{ x: 1680, y: 600 }} sticky pagination={{ defaultPageSize: 10, showSizeChanger: true, pageSizeOptions: ["10", "20", "50"], showTotal: (total) => `共 ${integer.format(total)} 条` }} locale={{ emptyText: <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} description="没有匹配的明细" /> }} />}
     </Card>
-    <div className="detail-notice">Data Notice：本页仅展示公开 Demo synthetic 数据；编号、组织、岗位与薪资均为虚构，不包含真实员工标识或企业业务数据。</div>
+    <div className="detail-notice">数据说明：本页仅展示公开演示用虚构数据；编号、组织、岗位与薪资均为虚构，不包含真实员工标识或企业业务数据。</div>
   </div>;
 }
