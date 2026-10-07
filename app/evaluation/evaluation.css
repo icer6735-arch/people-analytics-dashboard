@@ -3,3 +3,119 @@
 .evaluation-page{overflow:visible;min-width:0;width:100%;max-width:100%}
 .evaluation-page-inner{max-width:100%;min-width:0}
 .evaluation-table-scroll{width:100%;min-width:0;max-width:100%;overflow-x:auto}
+
+/* Phase 1S: Evaluation visual polish pilot. */
+.evaluation-page {
+  background: var(--ds-color-page);
+  color: var(--ds-color-text);
+}
+.evaluation-header {
+  gap: var(--ds-space-6);
+  padding: var(--ds-space-4) var(--ds-space-5);
+  border-color: var(--ds-color-border);
+  border-radius: var(--ds-radius-section);
+  box-shadow: var(--ds-shadow-float);
+}
+.evaluation-header h2 {
+  color: var(--ds-color-text);
+  font-size: var(--ds-font-size-page-title);
+  line-height: var(--ds-line-height-page-title);
+  font-weight: 700;
+}
+.evaluation-filter-bar {
+  gap: var(--ds-space-3);
+}
+.evaluation-filter-bar label {
+  gap: var(--ds-space-2);
+  color: var(--ds-color-text-secondary);
+  font-size: var(--ds-font-size-meta);
+  font-weight: 600;
+}
+.evaluation-filter-bar .ant-select {
+  min-height: var(--ds-control-height);
+}
+.evaluation-filter-bar .ant-select-selector {
+  min-height: var(--ds-control-height) !important;
+  border-color: var(--ds-color-border) !important;
+  border-radius: var(--ds-radius-control) !important;
+  box-shadow: none !important;
+}
+.evaluation-panel-stack {
+  gap: var(--ds-space-4);
+}
+.evaluation-metric-grid,
+.evaluation-trend-layout {
+  gap: var(--ds-space-4);
+}
+.evaluation-page .evaluation-metric-card,
+.evaluation-page .ant-card {
+  border-color: var(--ds-color-border);
+  border-radius: var(--ds-radius-card);
+  background: var(--ds-color-surface);
+  box-shadow: var(--ds-shadow-none);
+}
+.evaluation-metric-card .ant-card-body {
+  padding: var(--ds-space-4);
+}
+.evaluation-card-label {
+  color: var(--ds-color-text-secondary);
+  font-size: var(--ds-font-size-meta);
+  font-weight: var(--ds-font-weight-section-title);
+}
+.evaluation-metric-value {
+  color: var(--ds-color-text);
+  font-size: var(--ds-font-size-kpi);
+  font-weight: var(--ds-font-weight-kpi);
+}
+.evaluation-metric-value.green,
+.evaluation-trend-callout em {
+  color: var(--ds-color-success);
+}
+.evaluation-metric-note,
+.evaluation-data-note {
+  color: var(--ds-color-text-muted);
+  font-size:  var(--ds-font-size-meta);
+}
+.evaluation-page .ant-card-head {
+  min-height: 46px;
+  padding-inline: var(--ds-space-4);
+  border-bottom-color: var(--ds-color-border-subtle);
+}
+.evaluation-page .ant-card-head-title {
+  color: var(--ds-color-text);
+  font-size: var(--ds-font-size-section-title);
+  line-height: var(--ds-line-height-section-title);
+  font-weight: var(--ds-font-weight-section-title);
+}
+.evaluation-page .ant-card-body {
+  padding: var(--ds-space-4);
+}
+.evaluation-detail-card .ant-card-body {
+  padding-top: var(--ds-space-3);
+}
+.evaluation-trend-callout {
+  color: var(--ds-color-text-muted);
+}
+.evaluation-trend-callout strong {
+  color: var(--ds-color-text);
+  font-size: var(--ds-font-size-kpi);
+  font-weight: var(--ds-font-weight-kpi);
+}
+.evaluation-table-scroll {
+  margin-top: var(--ds-space-2);
+  border-top: 1px solid var(--ds-color-border-subtle);
+}
+.evaluation-table-scroll .ant-table-thead > tr > th {
+  background: var(--ds-color-surface-soft);
+  border-bottom-color: var(--ds-color-border-subtle);
+  color: var(--ds-color-text-secondary);
+}
+/* Keep the precision table's intrinsic width inside its local scroll boundary. */
+.evaluation-detail-card{min-width:0;overflow:hidden}
+.evaluation-table-scroll,
+.evaluation-table-scroll .ant-table-wrapper{
+  width:100%;
+  max-width:100%;
+  min-width:0;
+  overflow-x:auto !important;
+}
